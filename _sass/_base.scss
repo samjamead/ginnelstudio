@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure, span, a {
+    margin: 0;
+    padding: 0;
+    transition: ease 0.5s;
+}
+
+html, body {
+  font-size: $base-font-size;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  color: $text-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+section {
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+}
+
+p {
+  font-size: $base-font-size;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  max-width: $paragraph-width;
+  @include for-tablet-portrait-up {
+    font-size: $base-font-size;
+  };
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2rem;
+  @include for-tablet-portrait-up {
+    font-size: 2.5rem;
+  };
+}
+
+h2 {
+  font-size: 1.5rem;
+  @include for-tablet-portrait-up {
+    font-size: 1.75rem;
+  };
+}
+
+h3 {
+  font-size: 1.125rem;
+  @include for-tablet-portrait-up {
+    font-size: 1.3125rem;
+  };
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  &:hover {
+    color: scale-color($link-color, $lightness: 30%);
+    text-decoration: underline;
+  }
+}
+
+ol, ul, dl {
+  @extend p;
+  padding-left: 1.5rem;
+
+  li {
+    padding-left: 5px;
+  }
+}
+
+li, dd, dt {
+  margin-bottom: 1rem;
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+dt {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+// Blockquotes are wrapped in <figure> to please the semantic deities
+figure.quote {
+  @extend p;
+  border-left: 3px solid $brand-color;
+  padding: 0.625rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  figcaption {
+    font-size: $small;
+  }
+
+  cite {
+    font-style: italic;
+  }
+}
+
+blockquote {
+  @extend p;
+  color: $text-color-alt;
+  font-style: italic;
+  border: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+hr {
+  margin: 3rem 0;
+  border: 0;
+  border-bottom: $border;
+}
+
+img, video {
+  max-width: 100%;
+  vertical-align: middle;
+  display: block;
+  margin: 0 0 1rem;
+}
+iframe {
+  width: 100%;
+}
+pre,
+code {
+  background-color: #f5f5f5;
+  color: #f14668;
+  font-size: .875em;
+  font-weight: 400;
+  padding: .25em .5em .25em;
+}
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

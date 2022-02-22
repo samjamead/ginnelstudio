@@ -1,0 +1,78 @@
+// =======================================
+//  Global helpers
+// =======================================
+.phones-only {
+  @include for-tablet-portrait-up {
+    display: none;
+  };
+}
+.small {
+  font-size: $small;
+}
+.monospace {
+  font-family: $monospace-font-family;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.list-inline {
+  list-style: none;
+  li {
+    display: inline-block;
+    margin-right: 0.625rem;
+  }
+}
+
+
+// =======================================
+//  Meta helpers
+// =======================================
+
+// Swatches for the styleguide
+.swatch {
+  flex: 1 1 20%;
+  margin-bottom: 1rem;
+  min-height: 4rem;
+}
+
+.swatches-brand {
+  .swatch-lightest {
+    background-color: $brand-lightest;
+  }
+  .swatch-lighter {
+    background-color: $brand-lighter;
+  }
+  .swatch-light {
+    background-color: $brand-light;
+  }
+  .swatch-color {
+    background-color: $brand-color;
+  }
+  .swatch-dark {
+    background-color: $brand-dark;
+  }
+}
+
+.swatches-alt {
+  .swatch-lightest {
+    background-color: $alt-lightest;
+  }
+  .swatch-lighter {
+    background-color: $alt-lighter;
+  }
+  .swatch-light {
+    background-color: $alt-light;
+  }
+  .swatch-color {
+    background-color: $alt-color;
+  }
+  .swatch-dark {
+    background-color: $alt-dark;
+  }
+}

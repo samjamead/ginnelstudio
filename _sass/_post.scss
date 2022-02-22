@@ -1,0 +1,35 @@
+// =======================================
+//  Post SASS
+// =======================================
+
+.aside-paragraph {
+  @extend .flexbox;
+
+  .main-text {
+    @extend p;
+    flex: 0 0 100%;
+  }
+
+  aside {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex: 0 0 70%;
+    border-top: 2px solid $alt-light;
+    padding-top: 5px;
+    @include for-tablet-portrait-up {
+      margin-top: 0;
+      margin-bottom: 0;
+      flex: 0 0 240px;
+    };
+
+    h4 {
+      letter-spacing: 0.5px;
+      margin-top: 0.3125rem;
+      margin-bottom: 0.625rem;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

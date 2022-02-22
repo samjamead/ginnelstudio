@@ -1,0 +1,28 @@
+// ------------
+// Global styles
+// ------------
+.container {
+  max-width: $column-width;
+  margin: 0 auto;
+  padding: 0 10px;
+  @include for-desktop-up {
+    padding: 0;
+  };
+}
+
+// ------------
+// THE DEFAULT FLEXBOX
+// Columns on mobile, rows on desktop
+// Desktop rows are space-between justified and flex-start aligned
+// ------------
+.flexbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  };
+}
