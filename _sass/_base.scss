@@ -12,6 +12,7 @@ dl, dd, ol, ul, figure, span, a {
 
 html, body {
   font-size: $base-font-size;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -23,6 +24,7 @@ body {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   color: $text-color;
+  background: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -69,6 +71,7 @@ h2 {
 }
 
 h3 {
+  font-family: $base-font-family;
   font-size: 1.125rem;
   @include for-tablet-portrait-up {
     font-size: 1.3125rem;

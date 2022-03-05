@@ -1,0 +1,67 @@
+#about {
+  .site-header {
+    background: #f8bebe;
+  }
+}
+#process {
+  .site-header {
+    background: $brand-lighter;
+  }
+}
+#post {
+  .site-header {
+    background: transparent;
+  }
+}
+.site-header {
+  background: $alt-light;
+  // position: sticky;
+  // top: 0;
+  // box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+
+  .flexbox {
+    align-items: center;
+  }
+
+  h2, ol {
+    margin: 1rem 0;
+  }
+
+  ol {
+    max-width: 100%;
+  }
+
+  .keynav {
+    display: none;
+
+    @include for-tablet-landscape-up {
+      display: inline-block;
+      padding: 4px 12px;
+      margin-right: 0;
+    };
+  }
+
+  li {
+    margin: 0 0.5rem;
+
+    &:last-child {
+      margin-right: 0;
+
+      a {
+        padding-right: 0;
+      }
+    }
+
+    a {
+      padding: 5px 0.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

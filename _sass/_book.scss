@@ -1,0 +1,123 @@
+
+#book {
+  background-color: $alt-color;
+
+
+  .scene-wrapper {
+    position: relative;
+    height: 300vh;
+  }
+
+  .transition-trigger {
+    position: absolute;
+    height: 2vh;
+    width: 2vh;
+    background: $brand-color;
+  }
+
+  #transition1 {
+    top: 145vh;
+  }
+
+  #transition2 {
+    top: 250vh;
+  }
+
+  .scene {
+    position: sticky;
+    top: 2rem;
+    width:  90vw;
+    height: 80vh;
+    margin: 1rem auto;
+    perspective: 400px;
+    @include for-tablet-landscape-up {
+      width:  80vh;
+    };
+  }
+
+  .book {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-200px);
+    transition: transform 1s;
+  }
+
+  .show-spine  { transform: translateZ(-100px) translateY(-10vh) rotateZ(   -90deg); }
+  .show-front  { transform: translateZ(30vh)   translateX(4vh)  rotateY( -90deg);   }
+  .show-back   { transform: translateZ(-300px) translateX(-3vh)  rotateY(  90deg);   }
+  // .show-pages  { transform: translateZ(-100px) rotateY(-180deg); }
+  // .show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+  // .show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+
+  .book_face {
+    position: absolute;
+    border: 2px solid black;
+    text-align: center;
+    background: #fff;
+  }
+
+  .book_face-spine, .book_face-pages {
+    width: 7.5%;
+    height: 100%;
+  }
+
+  .book_face-front, .book_face-back {
+    width: 65%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .book_face-spine  {
+    transform: rotateY(  0deg) translateZ(100px);
+    background: #fff;
+  }
+
+  .book_face-front {
+    transform: rotateY( 90deg) translateZ(-20vh) translateX(12vh);
+  }
+
+  .book_face-back {
+    transform: rotateY(-90deg) translateZ(26vh) translateX(-12vh);
+  }
+
+  .spine-content {
+    @extend .flexbox;
+    width: 80vh;
+    height: 7.5%;
+    transform: rotateZ(90deg) translate(46%, 630%);
+    border: 2px solid #000;
+    background: #fff;
+    line-height: 1;
+    align-items: center;
+    padding: 0 1rem;
+
+    h1, p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .front-content, .back-content {
+    height: 100%;
+    width: 100%;
+    border: 3px solid $brand-color;
+    padding: 1rem;
+  }
+
+  .front-content {
+
+  }
+
+  .back-content {
+
+  }
+
+  label { margin-right: 10px; }
+
+
+}

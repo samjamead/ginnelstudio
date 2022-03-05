@@ -1,0 +1,14 @@
+---
+layout:         post
+body_id:        post
+date:           2022-02-21 10:46:59 +0000
+title:          "@Bstract"
+permalink:      /work/bstract
+img-feature:    bstract/bstractFeaturedImg.jpeg
+img-website:    bstract/bstractScreenshot.jpeg
+img-detail:     [bstract/detail1.jpeg, bstract/detail2.jpeg]
+project-lead:   "Jersey-based artist and talented musician @Bstract is pioneering animated NFTs on the Ethereum blockchain."
+project-intro:  "Working with @Bstract was good."
+project-stack:  "Our priorities for the website were load speed and integration with the OpenSea API."
+project-link:   https://bstract.studio/
+---

@@ -1,3 +1,51 @@
 ---
 layout: default
 ---
+
+<article class="">
+
+  <section class="post-hero">
+    <div class="container">
+
+      <p class="post-lead">{{ page.project-lead }}</p>
+
+      <div class="post-hero-img">
+        <img src="/assets/img/projects/{{ page.img-website }}" alt="{{ post.title }}" />
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="feature-section">
+    <div class="container">
+      <div class="feature-section-inner portfolio-feature">
+        <div class="feature-text">
+          <p>{{ page.project-intro }}</p>
+
+          <p>{{ page.project-stack }}</p>
+
+          <p><a href="{{ page.project-link }}" target="_blank">{{ page.title }} website</a> &#8594;</p>
+        </div>
+        <div class="post-detail-images">
+          <img src="/assets/img/projects/{{ page.img-detail[0] }}" alt="{{ post.title }} detail image" />
+          <img src="/assets/img/projects/{{ page.img-detail[1] }}" alt="{{ post.title }} detail image" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="post-hero">
+    <div class="container">
+
+      <div class="post-hero-img">
+        <img src="/assets/img/projects/{{ page.img-feature }}" alt="{{ post.title }}" />
+      </div>
+
+    </div>
+  </section>
+
+</article>
+
+{% include portfolio-section.html %}

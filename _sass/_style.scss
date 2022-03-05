@@ -2,6 +2,7 @@
 // Global styles
 // ------------
 .container {
+  position: relative;
   max-width: $column-width;
   margin: 0 auto;
   padding: 0 10px;
@@ -25,4 +26,64 @@
     justify-content: space-between;
     align-items: flex-start;
   };
+}
+
+.lead {
+  font-size: 1.2em;
+  color: #000;
+}
+
+.big-lead {
+  font-size: 1.5rem;
+  max-width: 38rem;
+  margin-bottom: 1em;
+}
+
+.feature-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .feature-section-inner {
+    @extend .flexbox;
+    align-items: center;
+  }
+
+  .feature-text,
+  .feature-image {
+    flex: 0 0 100%;
+  }
+
+  .feature-text {
+    @include for-tablet-landscape-up {
+      flex: 0 1 50%;
+    };
+    .lead {
+      max-width: 38rem;
+    }
+  }
+
+  .feature-image {
+    flex: 0 1 38%;
+    min-height: 75vh;
+    border-radius: 3px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // Control background in _page.scss
+
+    h3 {
+      font-family: $headings-font-family;
+      color: #fff;
+      font-size: 3.8rem;
+      margin-top: 0;
+    }
+  }
+
+  .feature-image-sticky {
+    position: sticky;
+    top: 4rem;
+    margin: -10rem 0 0 auto;
+  }
 }

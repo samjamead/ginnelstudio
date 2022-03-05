@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Layout
-$column-width:          1024px; // Middle column width
+$column-width:          1200px; // Middle column width
 $paragraph-width:       38em; // Should give ~80 cpl.
 
 // Typography
@@ -38,7 +38,8 @@ $alt-lightest:          scale-color($alt-color, $lightness: 60%);
 $light-grey:            #e7e7e7; // Borders, lines
 $soft-grey:             #9da5b4; // Text on dark backgrounds
 $dark-grey:             $text-color; // Dark backgrounds
-$background-color:      #fff; // White
+$background-color:      #fdfbfa; // Snow
+$background-gradient:   #fffaf2; // Floral white
 
 // Other stuff
 $border:                1px solid $light-grey;
@@ -52,5 +53,6 @@ $spacing-unit:          2rem;
   "header",
   "footer",
   "post",
-  "index"
+  "index",
+  "pages"
 ;
