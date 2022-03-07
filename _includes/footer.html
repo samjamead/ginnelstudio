@@ -1,28 +1,54 @@
 <section id="contact">
   <div class="container">
-    <h2>Contact Ginnel Studio</h2>
-    <p>Something something contact us</p>
+
+      <div class="contact-inner">
+
+        <div class="contact-card">
+          <p class="lead"><span>Tea? Coffee? Something stronger?</span> I'd love to help you navigate your way through the ever-changing zeitgeist of web, marketing, and blockchain technology. </p>
+        </div>
+
+        <div class="contact-card">
+          <p>GMT+00</p>
+        </div>
+
+        <div class="contact-card">
+          <p><a href="mailto:sam@ginnel.studio" target="_blank">sam@ginnel.studio</a></p>
+        </div>
+
+        <div class="contact-card">
+          <p><a href="tel:+447414767673" target="_blank">07414767673</a></p>
+        </div>
+
+      </div>
+
   </div>
 </section>
 
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <h3>{{ site.name }}</h3>
-      <p>{{ site.description }}</p>
-      <ul>
-        <li><a href="/">Home</a></li>
-        {% for page in site.pages %}
-          {% if page.permalink %}
-            <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-      <p class="small">A note on the images: <a href="https://unsplash.com/@birminghammuseumstrust?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Birmingham Museums Trust</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      <p class="small">Photo by <a href="https://unsplash.com/@britishlibrary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">British Library</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-      <p class="small">Photo by <a href="https://unsplash.com/@bostonpubliclibrary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Boston Public Library</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-      <p class="small">Photo by <a href="https://unsplash.com/photos/SMWPYQhVRuY">Europeana</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-      <p>Photo by <a href="https://unsplash.com/@fakurian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Milad Fakurian</a> on <a href="https://unsplash.com/s/photos/abstract-background?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+      <div class="navbar-inner">
+        <div class="brand">
+          <h2><a href="/">Ginnel Studio</a></h2>
+        </div>
+        <nav>
+          <ol>
+            <li><span class="key keynav">S</span><a href="/about">The Studio</a></li>
+            <li><span class="key keynav">W</span><a href="/work">The Work</a></li>
+            <li><span class="key keynav">P</span><a href="/process">The Process</a></li>
+            <li><span class="key keynav">G</span><a href="#contact">Get in touch</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <p class="lead">{{ site.description }}</p>
+
+      <p>Follow Sam on <a href="https://twitter.com/samjamead" target="_blank">Twitter</a>, <a href="https://github.com/samjamead" target="_blank">GitHub</a>, or <a href="https://linkedin.com/in/samjamead" target="_blank">LinkedIn</a>.
+
+      <p class="small">Thanks to the magic of Unsplash we've managed to borrow a few images for free. In particular we raided the archives of the <a href="https://unsplash.com/@birminghammuseumstrust?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Birmingham Museums Trust</a>.</p>
+
+      <p class="small">&copy; Samuel Mead &mdash; 2022 and beyond...
+
     </div>
   </div>
 </footer>

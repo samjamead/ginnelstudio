@@ -40,12 +40,22 @@
 }
 
 .feature-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  @include for-tablet-portrait-up {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  };
 
   .feature-section-inner {
     @extend .flexbox;
     align-items: center;
+  }
+
+  .row-reverse {
+    flex-direction: column-reverse;
+
+    @include for-tablet-landscape-up {
+      flex-direction: row;
+    };
   }
 
   .feature-text,
@@ -63,7 +73,7 @@
   }
 
   .feature-image {
-    flex: 0 1 38%;
+    flex: 0 1 100%;
     min-height: 75vh;
     border-radius: 3px;
     padding: 1rem;
@@ -72,6 +82,10 @@
     flex-direction: column;
     justify-content: space-between;
     // Control background in _page.scss
+
+    @include for-tablet-landscape-up {
+      flex: 0 1 38%;
+    };
 
     h3 {
       font-family: $headings-font-family;

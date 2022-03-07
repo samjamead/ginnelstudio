@@ -23,13 +23,29 @@ layout: default
         <div class="feature-text">
           <p>{{ page.project-intro }}</p>
 
-          <p>{{ page.project-stack }}</p>
+          {% if page.project-stack %}
+            <p>{{ page.project-stack }}</p>
+          {% endif %}
+
+          {% if page.project-quote %}
+          <figure class="quote">
+            <blockquote>
+              {{ page.project-quote }}
+            </blockquote>
+            <figcaption>
+              &mdash; {{ page.project-quoter }}
+            </figcaption>
+          </figure>
+          {% endif %}
 
           <p><a href="{{ page.project-link }}" target="_blank">{{ page.title }} website</a> &#8594;</p>
+          
         </div>
         <div class="post-detail-images">
           <img src="/assets/img/projects/{{ page.img-detail[0] }}" alt="{{ post.title }} detail image" />
-          <img src="/assets/img/projects/{{ page.img-detail[1] }}" alt="{{ post.title }} detail image" />
+          {% if page.img-detail[1] %}
+            <img src="/assets/img/projects/{{ page.img-detail[1] }}" alt="{{ post.title }} detail image" />
+          {% endif %}
         </div>
       </div>
 

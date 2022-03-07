@@ -4,41 +4,72 @@
 
 .post-hero {
   padding-top: 0;
-  padding-bottom: 4rem;
+  padding-bottom: 0;
+
+  @include for-tablet-landscape-up {
+    padding-bottom: 4rem;
+  };
 }
 
 .post-lead {
   @extend .lead;
-  margin: 4rem auto;
+  margin: 2rem auto 4rem;
   text-align: center;
   overflow: hidden;
+
+  @include for-tablet-portrait-up {
+    margin-top: 4rem;
+  };
 }
 
 .post-hero-img {
   position: relative;
   width: 100%;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background: #f3f2e6;
+
+  @include for-tablet-landscape-up {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  };
 
   img {
     margin: 0 auto;
-    width: 75%;
+    width: 90%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     box-shadow: 0 0 50px rgba(0,0,0,0.3);
+
+    @include for-tablet-portrait-up {
+      width: 75%;
+    };
   }
 }
 
-.feature-section {
-  .portfolio-feature {
-    align-items: flex-start;
+.portfolio-feature {
+  align-items: flex-start;
+
+  .feature-text {
+    margin-bottom: 2rem;
+
+    p {
+      margin: 3rem auto;
+      &:last-child {
+        text-align: center;
+      }
+    }
   }
 }
 
 .post-detail-images {
-  flex: 1 1 300px;
-  margin-left: 3rem;
+  flex: 1 1 100%;
+
+  @include for-tablet-landscape-up {
+    flex: 1 1 300px;
+    margin-left: 3rem;
+  };
+
   img {
     margin-bottom: 2rem;
   }

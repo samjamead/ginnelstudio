@@ -3,20 +3,67 @@
 // =======================================
 
 #contact {
-  background-color: #fde8d0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: #f8bebe;
+  color: #303030;
+
+  .contact-inner {
+    @extend .flexbox;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .contact-card {
+    flex: 0 0 100%;
+    padding: 3rem 1rem;
+    text-align: center;
+
+    @include for-tablet-landscape-up {
+      flex: 0 0 50%;
+    };
+
+    &:first-child {
+      border: $border;
+      border-radius: 4px;
+      padding: 1rem;
+      text-align: left;
+
+      .lead {
+        margin: 0;
+
+        span {
+          color: #000;
+        }
+      }
+    }
+  }
 }
 
 footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   width: 100%;
-  background: #f8f8f8;
-  border-top: $border;
+  background: #1b2133;
+  color: #e6ded1;
   text-align: center;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.35);
+
   @include for-tablet-portrait-up {
     text-align: left;
   };
-  .footer-inner {
-    margin: 0 auto;
-    padding: 2rem 0;
-    max-width: $column-width;
+
+  a,
+  .lead {
+    color: #e6ded1;
   }
+
+  a:hover {
+    color: $alt-light;
+  }
+
+  .navbar-inner {
+    margin-bottom: 3rem;
+  }
+
 }

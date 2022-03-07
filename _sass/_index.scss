@@ -14,8 +14,12 @@
 .hero {
   background: linear-gradient(to bottom, $alt-light, $alt-color);
   min-height: 90vh;
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 6rem;
+
+  @include for-tablet-landscape-up {
+    padding-top: 6rem;
+  };
 }
 
 .hero-inner {
@@ -25,8 +29,17 @@
   }
 
   h1 {
-    @include for-tablet-portrait-up {
-      font-size: 64px;
+    font-size: 2.75rem;
+    margin-top: 0;
+    @include for-tablet-landscape-up {
+      font-size: 4rem;
+    };
+  }
+
+  .lead {
+    font-size: 1.125rem;
+    @include for-tablet-landscape-up {
+      font-size: 1.2rem;
     };
   }
 
@@ -36,7 +49,11 @@
 }
 
 .prompt-wrapper {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
+
+  @include for-tablet-landscape-up {
+    margin-top: 2.5rem;
+  };
 
   p {
     max-width: 100%;
@@ -57,13 +74,27 @@
 }
 
 .hero-prompt {
-  margin-top: 6rem;
+  margin-top: 2rem;
+
+  @include for-tablet-landscape-up {
+    margin-top: 6rem;
+  };
 }
 
-.studioIntro {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+#studioIntro {
+  border-bottom: $border;
+
+  @include for-tablet-landscape-up {
+    padding-bottom: 6rem;
+  };
+
+  .lead {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 }
+
+
 
 .pages {
   gap: 2rem;
